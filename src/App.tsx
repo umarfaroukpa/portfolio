@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import { useSpring, animated } from '@react-spring/web';
 import Navbar from './components/Navbar';
+import Certifications from './components/Progress';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -11,11 +12,11 @@ import './App.css';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState('dark');
-  
+
   useEffect(() => {
     document.documentElement.className = theme;
   }, [theme]);
-  
+
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
@@ -26,6 +27,7 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <About />
+        <Certifications />
         <Projects />
         <Contact />
       </main>
