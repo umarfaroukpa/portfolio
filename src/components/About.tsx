@@ -157,10 +157,10 @@ const About: React.FC = () => {
                 </div>
                 <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                   <span className="text-sm text-indigo-600 dark:text-indigo-400 font-medium">
-                    2022 - Present
+                    2023 - Present
                   </span>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mt-1 mb-2">
-                    Frontend Developer
+                    Alschool Africa Frontend Development
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
                     Building responsive web applications with React, Next.js, and modern frontend tools.
@@ -178,10 +178,10 @@ const About: React.FC = () => {
                     2021 - 2022
                   </span>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mt-1 mb-2">
-                    UI/UX Designer
+                    Zuri Backend Development Internship
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Designed user interfaces and experiences for web and mobile applications focusing on usability.
+                    Learned backend development with Node.js, Express, and MongoDB.
                   </p>
                 </div>
               </div>
@@ -196,7 +196,7 @@ const About: React.FC = () => {
                     2020 - 2021
                   </span>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mt-1 mb-2">
-                    Web Development Student
+                    Zuri Fullstack Development Internship
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
                     Learned fundamentals of web development, JavaScript, and modern frameworks.
@@ -286,8 +286,8 @@ const About: React.FC = () => {
                 <motion.button
                   key={category.category}
                   className={`flex items-center px-4 py-2 rounded-md transition-colors ${activeCategory === category.category
-                      ? 'bg-white dark:bg-gray-600 text-indigo-600 dark:text-indigo-400 shadow-sm'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white'
+                    ? 'bg-white dark:bg-gray-600 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white'
                     }`}
                   onClick={() => {
                     setActiveCategory(category.category);
