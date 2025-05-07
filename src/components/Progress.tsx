@@ -24,27 +24,27 @@ const certificationsData: Certification[] = [
         id: 1,
         title: 'Frontend Development',
         issuer: 'Altschool Africa',
-        date: 'August 2023 to August 2024',
+        date: 'August 2023/August 2024',
         category: 'Frontend',
-        link: 'https://www.udemy.com/certificate/UC-12345678/',
+        link: '',
         description: 'Frontend Development. Learned advanced technologies concepts, algorithms, and data structures',
     },
     {
         id: 2,
         title: 'Full Stack Development',
         issuer: 'Zuri Internship',
-        date: 'March 2021',
+        date: '2022',
         category: 'Fullstack',
-        link: 'https://www.freecodecamp.org/certification/umarfaroukpa/javascript-algorithms-and-data-structures',
+        link: 'https://drive.google.com/file/d/145exyo_Ub7klNtTGVYglSy60XJ-c5iTB/view?usp=sharing',
         description: 'Completed a full-stack development course covering HTML, CSS, JavaScript, and React.',
     },
     {
         id: 3,
         title: 'Node.js and Express.js',
         issuer: 'Zuri Internship',
-        date: '2022',
+        date: '2023',
         category: 'Backend',
-        link: 'https://www.coursera.org/account/accomplishments/certificate/ABC123',
+        link: 'https://drive.google.com/file/d/1Gd72ouzDors5q0Iux_FTjkf-ECXImrLN/view?usp=sharing',
         description: 'Developed RESTful APIs and middleware using Node.js and Express.',
     },
 ];
@@ -112,11 +112,10 @@ const Certifications: React.FC = () => {
                         {certificationCategories.map((category) => (
                             <motion.button
                                 key={category.category}
-                                className={`flex items-center whitespace-nowrap px-3 sm:px-4 py-2 rounded-md transition-colors text-sm md:text-base ${
-                                    activeCategory === category.category
-                                        ? 'bg-white dark:bg-gray-600 text-indigo-600 dark:text-indigo-400 shadow-sm'
-                                        : 'text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white'
-                                }`}
+                                className={`flex items-center whitespace-nowrap px-3 sm:px-4 py-2 rounded-md transition-colors text-sm md:text-base ${activeCategory === category.category
+                                    ? 'bg-white dark:bg-gray-600 text-indigo-600 dark:text-indigo-400 shadow-sm'
+                                    : 'text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white'
+                                    }`}
                                 onClick={() => setActiveCategory(category.category)}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -181,7 +180,7 @@ const Certifications: React.FC = () => {
 
                 {/* Empty state when no certifications match the filter */}
                 {filteredCertifications.length === 0 && (
-                    <motion.div 
+                    <motion.div
                         className="text-center py-12"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

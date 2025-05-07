@@ -157,10 +157,10 @@ const About: React.FC = () => {
                 </div>
                 <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                   <span className="text-sm text-indigo-600 dark:text-indigo-400 font-medium">
-                    2023 - Present
+                    2023 - 2024
                   </span>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mt-1 mb-2">
-                    Alschool Africa Frontend Development
+                    Diploma In Frontend Development
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
                     Building responsive web applications with React, Next.js, and modern frontend tools.
@@ -175,7 +175,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                   <span className="text-sm text-indigo-600 dark:text-indigo-400 font-medium">
-                    2021 - 2022
+                    2023
                   </span>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mt-1 mb-2">
                     Zuri Backend Development Internship
@@ -193,7 +193,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
                   <span className="text-sm text-indigo-600 dark:text-indigo-400 font-medium">
-                    2020 - 2021
+                    2022
                   </span>
                   <h3 className="text-xl font-bold text-gray-800 dark:text-white mt-1 mb-2">
                     Zuri Fullstack Development Internship

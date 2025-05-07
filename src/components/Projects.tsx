@@ -14,9 +14,9 @@ interface Project {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Dashboard",
-    description: "A responsive admin dashboard for e-commerce platforms with real-time analytics, inventory management and order processing capabilities.",
-    image: "src/assets/Screenshot (10).png",
+    title: "Content Creation Platform",
+    description: "A platform for content creators to manage their projects, collaborate with teams, and track progress, User Authentication, Markdown Suppor.",
+    image: "public/chatter.png",
     tags: ["React", "TypeScript", "Redux", "Tailwind CSS"],
     github: "https://github.com/umarfaroukpa/chatter-platform",
     demo: "https://chatter-platform.vercel.app"
@@ -25,25 +25,25 @@ const projectsData: Project[] = [
     id: 2,
     title: "Weather App",
     description: "A weather application that provides real-time forecasts, location-based weather data, and interactive weather maps.",
-    image: "src/assets/Screenshot (8).png",
+    image: "/weather.png",
     tags: ["React", "API Integration", "Geolocation", "CSS Modules"],
     github: "https://github.com/umarfaroukpa/weather-app",
     demo: "https://umarfaroukpa.github.io/weather-app/"
   },
   {
     id: 3,
-    title: "Task Management System",
-    description: "A comprehensive task management application with features like drag-and-drop task organization, reminders, and team collaboration.",
-    image: "/api/placeholder/600/350",
+    title: "Healthcare Provider Search",
+    description: "Hospital Search, Export Hospitals, Share Hospitals, User Authentication, Markdown Suppor",
+    image: "/carefinder.png",
     tags: ["React", "TypeScript", "React DnD", "Firebase"],
     github: "https://github.com/umarfaroukpa/carefinder",
     demo: "https://carefinder-blond.vercel.app"
   },
   {
     id: 4,
-    title: "Personal Blog",
-    description: "A markdown-supported blog platform with categories, tags, and a dynamic commenting system.",
-    image: "/api/placeholder/600/350",
+    title: "Url Shortener & Custom Url Generator",
+    description: "URL-Shortening, Custom URL Generator, A markdown-supported,  QR Code Generation,  Analytics",
+    image: "/shorty.png",
     tags: ["NextJS", "MDX", "Tailwind CSS", "Vercel"],
     github: "https://github.com/umarfaroukpa/shorty",
     demo: "https://shorty-sigma.vercel.app"
@@ -52,7 +52,7 @@ const projectsData: Project[] = [
     id: 5,
     title: "Todo App",
     description: "A responsive task tracking application with features for adding, editing, and organizing daily tasks.",
-    image: "/api/placeholder/600/350",
+    image: "/todo.png",
     tags: ["React", "LocalStorage", "CSS", "JavaScript"],
     github: "https://github.com/umarfaroukpa/ToDo-App",
     demo: "https://umarfaroukpa.github.io/ToDo-App/"
@@ -61,7 +61,7 @@ const projectsData: Project[] = [
     id: 6,
     title: "Restaurant Page",
     description: "An elegant restaurant website showcasing menu items, contact information, and reservation capabilities.",
-    image: "/api/placeholder/600/350",
+    image: "/afridish.png",
     tags: ["JavaScript", "HTML", "CSS", "Webpack"],
     github: "https://github.com/umarfaroukpa/Restaurant-Page",
     demo: "https://umarfaroukpa.github.io/Restaurant-Page/"
@@ -70,7 +70,7 @@ const projectsData: Project[] = [
     id: 7,
     title: "Library Books",
     description: "A digital library application allowing users to track, categorize, and manage their reading collection.",
-    image: "/api/placeholder/600/350",
+    image: "/library.png",
     tags: ["JavaScript", "HTML", "CSS", "LocalStorage"],
     github: "https://github.com/umarfaroukpa/Library-Books",
     demo: "https://umarfaroukpa.github.io/Library-Books"
@@ -79,28 +79,28 @@ const projectsData: Project[] = [
     id: 8,
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my skills, experiences, and projects in web development.",
-    image: "/api/placeholder/600/350",
+    image: "/generator.png",
     tags: ["React", "Tailwind CSS", "Framer Motion", "Responsive Design"],
-    github: "https://github.com/umarfaroukpa/portfolio",
-    demo: "#"
+    github: "https://github.com/umarfaroukpa/CV-Generataor",
+    demo: "https://generator-blush-eta.vercel.app/"
   },
   {
     id: 9,
     title: "GitHub API Explorer",
     description: "An application leveraging the GitHub API to search for users and display their repositories and activity data.",
-    image: "/api/placeholder/600/350",
+    image: "/fetch.png",
     tags: ["React", "API Integration", "Tailwind CSS", "Vercel"],
     github: "https://github.com/umarfaroukpa/github-fecth-api-react",
     demo: "https://github-fecth-api-react.vercel.app/"
   },
   {
     id: 10,
-    title: "URL Shortener",
-    description: "A web application that shortens long URLs and provides analytics on link usage and click-through rates.",
-    image: "/api/placeholder/600/350",
+    title: "Personal Blog",
+    description: "A personal blog platform built with React.js, allowing users to read articles published.",
+    image: "/blog.png",
     tags: ["NextJS", "MongoDB", "Tailwind CSS", "Vercel"],
-    github: "https://github.com/umarfaroukpa/shorty",
-    demo: "https://shorty-sigma.vercel.app"
+    github: "https://github.com/umarfaroukpa/blog",
+    demo: "https://blog-phi-five-71.vercel.app"
   },
 ];
 
@@ -179,8 +179,8 @@ const Projects = () => {
                   setActiveFilter(filter);
                 }}
                 className={`px-3 py-1 md:px-4 md:py-2 text-sm md:text-base rounded-md whitespace-nowrap transition-colors ${activeFilter === filter
-                    ? 'bg-indigo-600 dark:bg-indigo-500 text-white'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                  ? 'bg-indigo-600 dark:bg-indigo-500 text-white'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                   }`}
               >
                 {filter}
@@ -197,8 +197,8 @@ const Projects = () => {
                 onClick={scrollLeft}
                 disabled={!canScrollLeft}
                 className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-700 rounded-full p-1 md:p-2 shadow-md ${canScrollLeft
-                    ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600'
-                    : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
+                  ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600'
+                  : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
                   }`}
                 aria-label="Previous project"
               >
@@ -209,8 +209,8 @@ const Projects = () => {
                 onClick={scrollRight}
                 disabled={!canScrollRight}
                 className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-gray-700 rounded-full p-1 md:p-2 shadow-md ${canScrollRight
-                    ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600'
-                    : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
+                  ? 'text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600'
+                  : 'text-gray-400 dark:text-gray-500 cursor-not-allowed'
                   }`}
                 aria-label="Next project"
               >
@@ -287,8 +287,8 @@ const Projects = () => {
                 key={index}
                 onClick={() => setStartIndex(index * projectsPerView)}
                 className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${Math.floor(startIndex / projectsPerView) === index
-                    ? 'bg-indigo-600 dark:bg-indigo-400'
-                    : 'bg-gray-300 dark:bg-gray-600'
+                  ? 'bg-indigo-600 dark:bg-indigo-400'
+                  : 'bg-gray-300 dark:bg-gray-600'
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
