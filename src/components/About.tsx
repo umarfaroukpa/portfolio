@@ -217,7 +217,7 @@ const About: React.FC = () => {
               <div className="relative">
                 <div className="aspect-square overflow-hidden rounded-2xl shadow-xl">
                   <img
-                    src="src/assets/my-pic.png"
+                    src="/my-pic.png"
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />
