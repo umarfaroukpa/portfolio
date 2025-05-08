@@ -125,7 +125,7 @@ const Hero = () => {
             {/* Main image with gradient overlay */}
             <div className="w-64 h-64 md:w-80 md:h-80 -mt-8 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl relative z-10">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/30 to-purple-600/30 z-20"></div>
-              <img src="src/assets/my-pic.png" alt="Umar Farouk" className="w-full h-full object-cover" />
+              <img src="/my-pic.png" alt="Umar Farouk" className="w-full h-full object-cover" />
             </div>
 
             {/* Animated background elements */}
