@@ -18,7 +18,7 @@ interface CertificationCategory {
     icon: React.ReactNode;
 }
 
-// Sample certification data (replace with your actual certifications)
+// certification data 
 const certificationsData: Certification[] = [
     {
         id: 1,
@@ -26,8 +26,8 @@ const certificationsData: Certification[] = [
         issuer: 'Altschool Africa',
         date: 'August 2023/August 2024',
         category: 'Frontend',
-        link: '',
-        description: 'Frontend Development. Learned advanced technologies concepts, algorithms, and data structures',
+        link: 'https://drive.google.com/file/d/1aGHXfYkwiwHUNMnZDn7-vvWClIj8mDrf/view?usp=sharing',
+        description: 'Learned advanced technologies concepts, algorithms, and data structures',
     },
     {
         id: 2,
@@ -49,7 +49,7 @@ const certificationsData: Certification[] = [
     },
 ];
 
-// Certification categories (aligned with skills categories from About.tsx)
+// Certification categories
 const certificationCategories: CertificationCategory[] = [
     {
         category: 'All',
@@ -168,7 +168,7 @@ const Certifications: React.FC = () => {
                                             className="flex items-center gap-1 md:gap-2 text-xs md:text-sm text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                                             aria-label={`View ${cert.title} certificate`}
                                         >
-                                            <span>View</span>
+                                            <span>View Certificate</span>
                                             <ExternalLink size={14} />
                                         </a>
                                     )}
