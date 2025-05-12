@@ -16,7 +16,7 @@ const projectsData: Project[] = [
     id: 1,
     title: "Content Creation Platform",
     description: "A platform for content creators to manage their projects, collaborate with teams, and track progress, User Authentication, Markdown Suppor.",
-    image: "public/chatter.png",
+    image: "/chatter.png",
     tags: ["React", "TypeScript", "Redux", "Tailwind CSS"],
     github: "https://github.com/umarfaroukpa/chatter-platform",
     demo: "https://chatter-platform.vercel.app"

@@ -25,7 +25,8 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               <li><a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a></li>
               <li><a href="#projects" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a></li>
               <li><a href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a></li>
-              <li><a href="https://blog-phi-five-71.vercel.app" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Blog</a></li>
+              <li><a href="https://umarfaroukilyas.vercel.app" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Blog</a></li>
+              <li><a href="https://drive.google.com/file/d/1wxpq-PbVCvUijpXmHQy4QKmi8YQmGyXc/view?usp=sharing" className="text-lg text-indigo-600 dark:text-indigo-400 hover:text-emerald-400 dark:hover:text-indigo-400 transition-colors">Resume</a></li>
             </ul>
           </nav>
 
@@ -65,6 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               <li><a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a></li>
               <li><a href="#projects" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a></li>
               <li><a href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a></li>
+              <li><a href="https://drive.google.com/file/d/1wxpq-PbVCvUijpXmHQy4QKmi8YQmGyXc/view?usp=sharing" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Resume</a></li>
             </ul>
           </nav>
         </div>

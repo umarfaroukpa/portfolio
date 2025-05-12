@@ -24,7 +24,7 @@ const certificationsData: Certification[] = [
         id: 1,
         title: 'Frontend Development',
         issuer: 'Altschool Africa',
-        date: 'August 2023/August 2024',
+        date: 'August 2023-August 2024',
         category: 'Frontend',
         link: 'https://drive.google.com/file/d/1aGHXfYkwiwHUNMnZDn7-vvWClIj8mDrf/view?usp=sharing',
         description: 'Learned advanced technologies concepts, algorithms, and data structures',
