@@ -148,7 +148,7 @@ const Hero = () => {
 
             <div className="absolute top-3/4 -left-20 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-3 flex items-center gap-2 animate-float-slow z-20">
               <Zap size={20} className="text-yellow-600 dark:text-yellow-400" />
-              <span className="font-medium text-gray-800 dark:text-white">NextJs</span>
+              <span className="font-medium text-gray-800 dark:text-white">NodeJs</span>
             </div>
           </div>
         </div>

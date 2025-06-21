@@ -136,7 +136,7 @@ const About: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-indigo-600 dark:bg-indigo-400 mx-auto mb-8"></div>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Frontend developer with a passion for creating intuitive, responsive, and accessible web experiences.
+            developer with a passion for creating intuitive, responsive, and accessible web experiences.
           </p>
         </motion.div>
 
@@ -230,10 +230,10 @@ const About: React.FC = () => {
 
             <div className="md:w-3/5">
               <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
-                Frontend Developer
+                Developer
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                I'm a passionate frontend developer with a strong foundation in creating modern web applications. With a background in design and user experience, I focus on building intuitive and visually appealing interfaces that deliver exceptional user experiences.
+                I'm a passionate developer with a strong foundation in creating modern web applications. With a background in design and user experience, I focus on building intuitive and visually appealing interfaces that deliver exceptional user experiences.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 I love solving complex problems through clean, efficient code and am constantly expanding my skills to stay at the forefront of web development technologies.
