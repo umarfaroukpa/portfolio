@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Github, Linkedin, X, Mail, ArrowDown, Code, Monitor, Zap } from 'lucide-react';
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
     }
 
     return () => clearTimeout(timeout);
-  }, [typedText, isDeleting, currentText, currentTextIndex]);
+  }, [typedText, isDeleting, currentText, currentTextIndex, textOptions.length]);
 
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-gray-50 to-indigo-50 dark:from-gray-900 dark:to-indigo-950 transition-colors duration-300 relative overflow-hidden">

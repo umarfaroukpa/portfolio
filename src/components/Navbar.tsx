@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 
 interface NavbarProps {

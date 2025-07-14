@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
