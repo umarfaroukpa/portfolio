@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               <li><a
                 target='_blank'
                 rel="noopener noreferrer"
-                href="https://drive.google.com/file/d/1wxpq-PbVCvUijpXmHQy4QKmi8YQmGyXc/view?usp=sharing" className="text-lg text-indigo-600 dark:text-indigo-400 hover:text-emerald-400 dark:hover:text-indigo-400 transition-colors">Resume</a></li>
+                href="https://drive.google.com/file/d/1hGzSQCepGCpD_uRrMXQqn5YLa3D4qmjf/view?usp=sharing" className="text-lg text-indigo-600 dark:text-indigo-400 hover:text-emerald-400 dark:hover:text-indigo-400 transition-colors">Resume</a></li>
             </ul>
           </nav>
 
