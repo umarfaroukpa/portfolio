@@ -25,11 +25,10 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
+    { href: '/', label: 'Home' },
     { href: '#projects', label: 'Work' },
     { href: '#about', label: 'About' },
-    // { href: '#skills', label: 'Skills' },    // uncomment if you have this section
-    // { href: '#contact', label: 'Contact' },
+     { href: '#skills', label: 'Skills' },    
   ];
 
   const mobileMenuVariants: Variants = {
@@ -64,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
           
           {/* Logo */}
           <a 
-            href="#home"
+            href="/"
             className="text-xl md:text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
           >
             Umar Farouk

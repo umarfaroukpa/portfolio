@@ -11,7 +11,7 @@ import Projects from './components/Projects';
 
 
 const App: React.FC = () => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
     document.documentElement.className = theme;
@@ -29,8 +29,23 @@ const App: React.FC = () => {
         <Projects prefersReducedMotion={false} />
         <About />
         <Certifications />
-        <ContactLink href="mailto:yasmarfaq51@email.com" label="Email" />
-        <Contact />
+        {/* <ContactLink
+          href="mailto:yasmarfaq51@email.com"
+          label="Email"
+          icon={
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          }
+        />
+        <Contact /> */}
       </main>
       <Footer />
     </div>

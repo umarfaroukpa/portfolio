@@ -1,16 +1,8 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Code, 
-  Layout, 
-  Zap, 
-  Target, 
-  Eye, 
-  HeartHandshake, 
-  Terminal, 
-  Layers 
-} from 'lucide-react';
-
+import { motion,   } from 'framer-motion';
+import { Layout, Zap, Target, Eye, } from 'lucide-react';
+   
+  
+  
 const EASING = [0.22, 1, 0.36, 1] as const;
 
 const VARIANTS = {
@@ -47,11 +39,10 @@ interface AboutProps {
 }
 
 const About = ({ prefersReducedMotion = false }: AboutProps) => {
-  // Reduced motion is handled per-prop to match framer-motion types (whileInView cannot be false)
   const animationProps = {};
 
   const paragraphs = [
-    "Over the past 4+ years, I've focused on building web applications people actually rely on — from internal coordination tools and data-heavy dashboards to customer-facing platforms that need to perform under pressure.",
+    "Over the past 3+ years, I've focused on building web applications people actually rely on — from internal coordination tools and data-heavy dashboards to customer-facing platforms that need to perform under pressure.",
     "I approach problems system-first: strong layout hierarchies, predictable state patterns, tight performance budgets, and thoughtful accessibility from day one.",
     "I obsess over the small things that build trust — reliable keyboard navigation, honest loading states, graceful error handling, and micro-interactions that clarify rather than decorate."
   ];
@@ -64,7 +55,7 @@ const About = ({ prefersReducedMotion = false }: AboutProps) => {
   ];
 
   return (
-    <section className="relative py-28 md:py-36 px-5 sm:px-8 lg:px-12 bg-white/80 backdrop-blur-md shadow-xl overflow-hidden">
+    <section  id='about' className="relative py-28 md:py-36 px-5 sm:px-8 lg:px-12 bg-white/80 backdrop-blur-md shadow-xl overflow-hidden">
       {/* Optional subtle background texture / gradient orb */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute -left-20 top-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />

@@ -63,9 +63,9 @@ interface Project {
   decisions: string[];
   outcome: string;
   tech: string[];
-  image?: string; // Optional screenshot URL
-  liveUrl?: string; // Optional live demo URL
-  githubUrl?: string; // Optional GitHub URL
+  image?: string;
+  liveUrl?: string;
+  githubUrl?: string;
 }
 
 const ProjectCard = ({
@@ -94,7 +94,6 @@ const ProjectCard = ({
       {...animationProps}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Left: Visual Evidence with depth and reveal */}
         <motion.div
           className="relative rounded-xl overflow-hidden shadow-lg"
           variants={VARIANTS.imageReveal}
@@ -111,7 +110,6 @@ const ProjectCard = ({
                 onLoad={() => setImageLoaded(true)}
                 className={`w-full h-auto object-cover transition-transform duration-500 ${isHovered ? 'scale-105' : 'scale-100'}`}
               />
-              {/* Glassmorphism overlay with links on hover */}
               <AnimatePresence>
                 {isHovered && (
                   <motion.div
@@ -125,6 +123,8 @@ const ProjectCard = ({
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-white font-medium hover:bg-white/30 transition"
                         >
                           View Live
@@ -133,6 +133,8 @@ const ProjectCard = ({
                       {project.githubUrl && (
                         <a
                           href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-white font-medium hover:bg-white/30 transition"
                         >
                           Source
@@ -142,13 +144,11 @@ const ProjectCard = ({
                   </motion.div>
                 )}
               </AnimatePresence>
-              {/* Loading placeholder with subtle animation */}
               {!imageLoaded && (
                 <div className="absolute inset-0 bg-neutral-100 animate-pulse" />
               )}
             </>
           ) : (
-            // Fallback: Tech stack with glassmorphism
             <div className="p-6 bg-white/50 backdrop-blur-md rounded-xl">
               <h4 className="text-sm font-semibold uppercase tracking-wide text-neutral-600 mb-4">
                 Built with
@@ -174,7 +174,6 @@ const ProjectCard = ({
           )}
         </motion.div>
 
-        {/* Right: Project Details with better typography and fluid expansions */}
         <motion.div
           className="space-y-6"
           variants={VARIANTS.staggerContainer}
@@ -183,7 +182,6 @@ const ProjectCard = ({
           viewport={{ once: true }}
           {...animationProps}
         >
-          {/* Title & Context - Elegant typography */}
           <motion.h3
             variants={VARIANTS.fadeUp}
             className="text-2xl md:text-3xl font-serif font-bold text-neutral-900"
@@ -197,7 +195,6 @@ const ProjectCard = ({
             {project.context}
           </motion.p>
 
-          {/* Problem - Clean section */}
           <motion.div variants={VARIANTS.item}>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-500 mb-2">
               Problem
@@ -205,7 +202,6 @@ const ProjectCard = ({
             <p className="text-base text-neutral-700">{project.problem}</p>
           </motion.div>
 
-          {/* Decisions - Accordion-like expansion with stagger */}
           <motion.div variants={VARIANTS.item}>
             <button
               onClick={() => setExpanded(!expanded)}
@@ -246,7 +242,6 @@ const ProjectCard = ({
             </AnimatePresence>
           </motion.div>
 
-          {/* Outcome - Highlighted */}
           <motion.div variants={VARIANTS.item}>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-500 mb-2">
               Outcome
@@ -254,7 +249,6 @@ const ProjectCard = ({
             <p className="text-base text-neutral-700 font-medium">{project.outcome}</p>
           </motion.div>
 
-          {/* Tech Stack - Inline chips */}
           <motion.div variants={VARIANTS.item} className="flex flex-wrap gap-2">
             {project.tech.map((tech) => (
               <span
@@ -276,63 +270,63 @@ const Projects = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) 
     {
       id: 'p1',
       title: 'Carefinder',
-      context: 'Internal tool for distributed team coordination',
-      problem: 'Existing tools created noise. Teams needed clarity, not features.',
+      context: 'A comprehensive web application designed to help users find and book hospitals in Nigeria',
+      problem: 'Finding healthcare facilities and booking appointments was fragmented and time-consuming',
       decisions: [
-        'Single-view interface—no context switching',
-        'Status hierarchy through layout, not color',
-        'Optimistic updates for perceived speed'
+        'Hospital search with location-based filtering and specialty matching',
+        'Role-based access control for users, moderators, and administrators',
+        'Firebase integration for authentication and real-time data'
       ],
-      outcome: '40% reduction in daily tool switches. Adopted across 3 departments.',
-      tech: ['React', 'TypeScript', 'Tailwind', 'Zustand'],
+      outcome: 'Simplified hospital discovery with user reviews, ratings, and seamless appointment booking',
+      tech: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Firebase', 'MongoDB'],
       image: '/carefinder.png',
       liveUrl: 'https://carefinder-blond.vercel.app/',
       githubUrl: 'https://github.com/umarfaroukpa/carefinder'
     },
     {
       id: 'p2',
-      title: 'E-commerce Checkout Flow',
-      context: 'High-traffic retail platform with 60% mobile usage',
-      problem: 'Cart abandonment at 72%. Form friction, unclear progress.',
+      title: 'AfriDish Restaurant',
+      context: 'Responsive website for a restaurant specializing in authentic African cuisine',
+      problem: 'Needed an interactive platform to showcase menu, enable reservations, and highlight cultural heritage',
       decisions: [
-        "Progressive disclosure—show what's needed, when needed",
-        'Real-time validation with clear recovery paths',
-        'Mobile-first layout with thumb-zone CTA placement'
+        'Interactive navigation with smooth tab switching between pages',
+        'Filterable menu with dynamic cart functionality',
+        'Mobile-first responsive design with Webpack bundling'
       ],
-      outcome: 'Abandonment dropped to 48%. 24% increase in mobile conversions.',
-      tech: ['Next.js', 'Stripe', 'React Hook Form', 'Zod'],
+      outcome: 'Enhanced user experience with reservation system, testimonial slider, and Google Maps integration',
+      tech: ['HTML5', 'CSS3', 'Vanilla JavaScript', 'Webpack'],
       image: '/afridish.png',
       liveUrl: 'https://umarfaroukpa.github.io/Restaurant-Page',
       githubUrl: 'https://github.com/umarfaroukpa/Restaurant-Page'
     },
     {
       id: 'p3',
-      title: 'Url Shortener',
-      context: 'Url shortening app with user authentication and analytics',
-      problem: 'Metrics overwhelmed users. Charts without narrative.',
+      title: 'Shorty URL Shortener',
+      context: 'URL shortening app with custom domains, user authentication, and analytics',
+      problem: 'Users needed branded short links with custom domains and detailed tracking',
       decisions: [
-        'Hierarchy through size and position, not decoration',
-        'Progressive detail—summary to drill-down',
-        'Consistent layout grid for pattern recognition'
+        'Custom domain logic with DNS verification for branded URLs',
+        'MongoDB for scalable link storage and analytics',
+        'Next.js with Vercel deployment for optimal performance'
       ],
-      outcome: 'Weekly usage increased 3x. Executive team adopted for quarterly reviews.',
-      tech: ['React', 'D3.js', 'Chart.js', 'TanStack Query'],
+      outcome: 'Personalized short URLs with domain customization and comprehensive tracking analytics',
+      tech: ['Next.js', 'MongoDB', 'Vercel', 'TypeScript'],
       image: '/shorty.png',
       liveUrl: 'https://shorty-sigma.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/shorty'
     },
     {
       id: 'p4',
-      title: 'Chatter-Platform',
-      context: 'An App for chatting with friends and family',
-      problem: 'Metrics overwhelmed users. Charts without narrative.',
+      title: 'Chatter Platform',
+      context: 'A Next.js content creation platform for writers to create, share, and connect',
+      problem: 'Writers needed a unified platform to personalize their experience and build community',
       decisions: [
-        'Hierarchy through size and position, not decoration',
-        'Progressive detail—summary to drill-down',
-        'Consistent layout grid for pattern recognition'
+        'Onboarding flow to tailor experience by writer type',
+        'Firebase Authentication with responsive Tailwind CSS design',
+        'Interactive dashboard for content creation and social feed'
       ],
-      outcome: 'Weekly usage increased 3x. Executive team adopted for quarterly reviews.',
-      tech: ['React', 'D3.js', 'Chart.js', 'TanStack Query'],
+      outcome: 'User-friendly platform with personalized dashboards and built-in help guide for seamless navigation',
+      tech: ['Next.js', 'React', 'Firebase', 'Tailwind CSS'],
       image: '/chatter.png',
       liveUrl: 'https://chatter-platform.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/chatter-platform'
@@ -340,47 +334,47 @@ const Projects = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) 
     {
       id: 'p5',
       title: 'Library Management System',
-      context: 'Library management system for tracking books and users',
-      problem: 'Metrics overwhelmed users. Charts without narrative.',
+      context: 'Library management system for tracking books with read/unread toggles',
+      problem: 'Needed a simple interface to manage personal book collections and reading status',
       decisions: [
-        'Hierarchy through size and position, not decoration',
-        'Progressive detail—summary to drill-down',
-        'Consistent layout grid for pattern recognition'
+        'Vanilla JavaScript with Webpack for bundling',
+        'Toggle functionality for read/unread status tracking',
+        'GitHub Pages deployment for easy access'
       ],
-      outcome: 'Weekly usage increased 3x. Executive team adopted for quarterly reviews.',
-      tech: ['React', 'D3.js', 'Chart.js', 'TanStack Query'],
+      outcome: 'Lightweight book tracking system with intuitive status management',
+      tech: ['Vanilla JavaScript', 'HTML5', 'CSS3', 'Webpack', 'GitHub Pages'],
       image: '/library.png',
       liveUrl: 'https://umarfaroukpa.github.io/Library-Books',
       githubUrl: 'https://github.com/umarfaroukpa/Library-Books'
     },
     {
       id: 'p6',
-      title: 'CV-Generator',
-      context: 'A web app to create and download professional CVs',
-      problem: 'Metrics overwhelmed users. Charts without narrative.',
+      title: 'CV Generator',
+      context: 'A React application for creating and customizing professional CVs/résumés',
+      problem: 'Users needed an easy way to build professional CVs with real-time preview',
       decisions: [
-        'Hierarchy through size and position, not decoration',
-        'Progressive detail—summary to drill-down',
-        'Consistent layout grid for pattern recognition'
+        'Interactive form with real-time CV preview',
+        'Edit and update functionality for iterative refinement',
+        'Responsive layout for desktop and mobile devices'
       ],
-      outcome: 'Weekly usage increased 3x. Executive team adopted for quarterly reviews.',
-      tech: ['React', 'D3.js', 'Chart.js', 'TanStack Query'],
+      outcome: 'Clean, professional CV builder with instant visual feedback and mobile accessibility',
+      tech: ['React', 'JavaScript', 'CSS3', 'Vite'],
       image: '/generator.png',
       liveUrl: 'https://generator-blush-eta.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/CV-Generataor'
     },
     {
       id: 'p7',
-      title: 'Devcore',
-      context: 'An Agency web app building and managing modern web applications',
-      problem: 'Metrics overwhelmed users. Charts without narrative.',
+      title: 'Devcore Agency',
+      context: 'Next.js agency workflow platform with role-based dashboards and project management',
+      problem: 'Agencies needed unified project, task, and approval management across roles',
       decisions: [
-        'Hierarchy through size and position, not decoration',
-        'Progressive detail—summary to drill-down',
-        'Consistent layout grid for pattern recognition'
+        'Role-based dashboards for Admin, Developer, and Client users',
+        'JWT authentication with Zustand for persisted state',
+        'Data export capabilities (XLSX/PDF) and Recharts for reporting'
       ],
-      outcome: 'Weekly usage increased 3x. Executive team adopted for quarterly reviews.',
-      tech: ['React', 'D3.js', 'Chart.js', 'TanStack Query'],
+      outcome: 'Comprehensive agency management with contact inbox, invites, approvals, and analytics',
+      tech: ['Next.js 16', 'TypeScript', 'Tailwind CSS 4', 'Axios', 'Zustand', 'Recharts'],
       image: '/devcore.png',
       liveUrl: 'https://devcore-agency-snowy.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/Devcore-Agency-Frontend'
@@ -388,15 +382,15 @@ const Projects = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) 
     {
       id: 'p8',
       title: 'Academy Hub',
-      context: 'Academic management system for institutions',
-      problem: 'Metrics overwhelmed users. Charts without narrative.',
+      context: 'Comprehensive academic management platform for universities with multi-role support',
+      problem: 'Universities needed streamlined course management, enrollment, and assignment workflows',
       decisions: [
-        'Hierarchy through size and position, not decoration',
-        'Progressive detail—summary to drill-down',
-        'Consistent layout grid for pattern recognition'
+        'Multi-role authentication with Google OAuth integration',
+        'Role-based dashboards for students, lecturers, and administrators',
+        'Complete CRUD operations for courses, assignments, and enrollments'
       ],
-      outcome: 'Weekly usage increased 3x. Executive team adopted for quarterly reviews.',
-      tech: ['React', 'D3.js', 'Chart.js', 'TanStack Query'],
+      outcome: 'Unified platform with study groups, grade tracking, and comprehensive analytics for all roles',
+      tech: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Axios', 'SWR', 'Google OAuth'],
       image: '/academy.png',
       liveUrl: 'https://academic-manager.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/AcademyHub-frontend'
@@ -404,15 +398,15 @@ const Projects = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) 
     {
       id: 'p9',
       title: 'Asset Manager',
-      context: 'an app to manage company, corporate, and individual assets',
-      problem: 'Metrics overwhelmed users. Charts without narrative.',
+      context: 'Comprehensive asset management platform with subscription billing and role-based access',
+      problem: 'Organizations needed complete lifecycle tracking with QR codes and usage-based pricing',
       decisions: [
-        'Hierarchy through size and position, not decoration',
-        'Progressive detail—summary to drill-down',
-        'Consistent layout grid for pattern recognition'
+        'Multi-tenant architecture with Firebase Authentication',
+        'Flexible subscription plans (Starter, Professional, Enterprise) with Paystack integration',
+        'QR code scanning for mobile field operations and real-time analytics'
       ],
-      outcome: 'Weekly usage increased 3x. Executive team adopted for quarterly reviews.',
-      tech: ['React', 'D3.js', 'Chart.js', 'TanStack Query'],
+      outcome: 'Full-featured platform with 14-day trials, audit trails, and advanced analytics for enterprise use',
+      tech: ['React 18', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Chart.js', 'Vite'],
       image: '/asset.png',
       liveUrl: 'https://asset-management-eta.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/Asset-Manager-Frontend/tree/main/asset-management'
@@ -420,7 +414,7 @@ const Projects = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) 
   ];
 
   return (
-    <section className="max-w-7xl mx-auto py-16 px-4 md:px-8">
+    <section id='projects' className="max-w-7xl mx-auto py-16 px-4 md:px-8">
       <motion.h2
         className="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-12 text-center"
         variants={VARIANTS.fadeUp}

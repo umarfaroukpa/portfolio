@@ -1,20 +1,8 @@
 import { useState, useMemo } from 'react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { 
-  Layout, 
-  Code, 
-  Database, 
-  Server, 
-  Zap, 
-  GitBranch, 
-  Terminal, 
-  Layers, 
-  Globe, 
-  Cpu, 
-  ShieldCheck, 
-  Rocket 
-} from 'lucide-react';
-
+import { motion } from 'framer-motion';
+import { Layout, Server, Rocket } from 'lucide-react';
+   
+  
 const EASING = [0.22, 1, 0.36, 1] as const;
 
 const VARIANTS = {
@@ -60,27 +48,27 @@ const Skills = () => {
       title: "Building Interfaces",
       description: "Crafting responsive, accessible, and delightful user experiences",
       icon: <Layout className="w-8 h-8" />,
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Shadcn UI", "Headless UI"],
+      skills: ["HTML & CSS", "Vanilla JS", "React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Shadcn UI", "Headless UI"],
       color: "from-blue-500/10 to-indigo-500/10"
     },
     {
       title: "Making Things Work",
       description: "Turning ideas into reliable, performant backend logic and APIs",
       icon: <Server className="w-8 h-8" />,
-      skills: ["Node.js", "Express", "NestJS", "MongoDB", "PostgreSQL", "REST & GraphQL", "Prisma", "Zod"],
+      skills: ["Node.js", "Express", "MongoDB", "Firebase", "Render", "Supabase", "PostgreSQL", "REST & GraphQL", "Prisma", "Zod"],
       color: "from-emerald-500/10 to-teal-500/10"
     },
     {
       title: "Shipping & Maintaining",
       description: "Delivering fast, keeping things stable, and iterating with confidence",
       icon: <Rocket className="w-8 h-8" />,
-      skills: ["Git & GitHub", "Vercel", "CI/CD", "Jest + React Testing Library", "Playwright", "Documentation", "Performance Optimization"],
+      skills: ["Git & GitHub", "Github Pages", "Vercel", "CI/CD", "Cypress, Jest + React Testing Library", "Performance Optimization"],
       color: "from-amber-500/10 to-orange-500/10"
     }
   ];
 
   return (
-    <section id="skills" className="relative py-24 md:py-32 bg-white/80 backdrop-blur-md shadow-xl overflow-hidden">
+    <section id="skills" className="relative py-24 md:py-32 bg-white/80 backdrop-blur-md shadow-xl overflow-hidden mt-10 ">
       {/* Subtle background accents */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -left-40 top-20 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />

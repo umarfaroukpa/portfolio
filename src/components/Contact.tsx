@@ -1,14 +1,7 @@
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Send, 
-  MapPin, 
-  Calendar, 
-  Clock 
-} from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, Send, MapPin, Calendar, Clock } from 'lucide-react';
+   
+   
 
 const EASING = [0.22, 1, 0.36, 1] as const;
 
@@ -77,7 +70,7 @@ export const ContactLink = ({ href, label, icon }: ContactLinkProps) => {
 const Contact = ({ prefersReducedMotion = false }: { prefersReducedMotion?: boolean }) => {
   const contactLinks = [
     {
-      href: "mailto:umarfaroukpa@gmail.com", // ← Replace with your real email
+      href: "mailto:yasmarfaq51@gmail.com", 
       label: "Email me",
       icon: <Mail className="w-6 h-6" />
     },
@@ -87,20 +80,19 @@ const Contact = ({ prefersReducedMotion = false }: { prefersReducedMotion?: bool
       icon: <Github className="w-6 h-6" />
     },
     {
-      href: "https://linkedin.com/in/umarfaroukpa", // ← update if you have LinkedIn
+      href: "https://linkedin.com/in/umarfaroukpa", 
       label: "LinkedIn",
       icon: <Linkedin className="w-6 h-6" />
     },
-    // Optional: add Twitter / X if you use it actively
-    // {
-    //   href: "https://x.com/yourhandle",
-    //   label: "X / Twitter",
-    //   icon: <Twitter className="w-6 h-6" />
-    // },
+    {
+      href: 'https://x.com/FaroukIlyas',
+      icon: <Twitter className="w-5 h-5" />,
+      label: 'X / Twitter'
+    },
   ];
 
   return (
-    <section className="relative py-28 md:py-36 px-5 sm:px-8 lg:px-12 bg-white/80 backdrop-blur-md shadow-xl overflow-hidden">
+    <section id='contact' className="relative py-28 md:py-36 px-5 sm:px-8 lg:px-12 bg-white/80 backdrop-blur-md shadow-xl overflow-hidden">
       {/* Subtle background glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute left-1/4 top-1/3 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
