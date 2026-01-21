@@ -1,56 +1,153 @@
+import { motion } from 'framer-motion';
+import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 
-import { Github, Linkedin, X, Mail } from 'lucide-react';
+const EASING = [0.22, 1, 0.36, 1] as const;
 
-const Footer: React.FC = () => {
+const VARIANTS = {
+  fadeUp: {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: EASING } 
+    }
+  },
+  staggerContainer: {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  },
+  iconHover: {
+    rest: { scale: 1, rotate: 0 },
+    hover: { scale: 1.1, rotate: 5, transition: { duration: 0.3 } }
+  }
+};
+
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const socialLinks = [
+    {
+      href: 'https://github.com/umarfaroukpa',
+      icon: <Github className="w-5 h-5" />,
+      label: 'GitHub'
+    },
+    {
+      href: 'https://www.linkedin.com/in/umarfaroukpa',
+      icon: <Linkedin className="w-5 h-5" />,
+      label: 'LinkedIn'
+    },
+    {
+      href: 'https://x.com/FaroukIlyas',
+      icon: <Twitter className="w-5 h-5" />,
+      label: 'X / Twitter'
+    },
+    {
+      href: 'mailto:yasmarfaq51@gmail.com',
+      icon: <Mail className="w-5 h-5" />,
+      label: 'Email'
+    }
+  ];
+
+  const navLinks = [
+    { href: '#home', label: 'Home' },
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#contact', label: 'Contact' }
+  ];
+
   return (
-    <footer className="bg-gray-800 dark:bg-gray-800 text-white py-12 transition-colors duration-300">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold text-indigo-400">DevPortfolio</h2>
-            <p className="text-gray-400 mt-2 max-w-sm">
-              Frontend developer creating modern and responsive web applications.
+    <footer className="relative bg-white/80 backdrop-blur-md shadow-xl dark:from-neutral-950 dark:to-neutral-900 text-neutral-700 dark:text-neutral-300 overflow-hidden mt-10 -mb-8">
+      {/* Subtle background elements */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute left-10 bottom-10 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl" />
+        <div className="absolute right-20 top-20 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 md:py-20">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={VARIANTS.staggerContainer}
+          className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-0"
+        >
+          {/* Left: Brand & Description */}
+          <motion.div variants={VARIANTS.fadeUp} className="max-w-md">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-neutral-900 dark:text-white mb-4">
+              Umar Farouk
+            </h2>
+            <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              Frontend engineer crafting reliable, performant web experiences. Based in Abuja, Nigeria.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-4">
-            <a href="https://github.com/umarfaroukpa" target="_blank" rel="noopener noreferrer"
-              className="p-2 bg-gray-800 rounded-full text-gray-300 hover:bg-indigo-800 hover:text-white transition-colors">
-              <Github size={20} />
-            </a>
-            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer"
-              className="p-2 bg-gray-800 rounded-full text-gray-300 hover:bg-indigo-800 hover:text-white transition-colors">
-              <Linkedin size={20} />
-            </a>
-            <a href="https://x.com/FaroukIlyas" target="_blank" rel="noopener noreferrer"
-              className="p-2 bg-gray-800 rounded-full text-gray-300 hover:bg-indigo-800 hover:text-white transition-colors">
-              <X size={24} />
-            </a>
-            <a href="mailto:yasmarfaq51@gmail.com"
-              className="p-2 bg-gray-800 rounded-full text-gray-300 hover:bg-indigo-800 hover:text-white transition-colors">
-              <Mail size={20} />
-            </a>
-          </div>
-        </div>
+          {/* Right: Social Links */}
+          <motion.div variants={VARIANTS.staggerContainer} className="flex gap-4">
+            {socialLinks.map((link, i) => (
+              <motion.a
+                key={i}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={VARIANTS.iconHover}
+                initial="rest"
+                whileHover="hover"
+                className="p-3 bg-white/50 dark:bg-neutral-800/50 backdrop-blur-md rounded-full text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white border border-neutral-200/50 dark:border-neutral-700/50 shadow-sm hover:shadow-md transition-all duration-300"
+                aria-label={link.label}
+              >
+                {link.icon}
+              </motion.a>
+            ))}
+          </motion.div>
+        </motion.div>
 
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} Umar Farouk Ilyas. All rights reserved.
-            </p>
+        {/* Divider */}
+        <motion.hr 
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.8, ease: EASING }}
+          viewport={{ once: true }}
+          className="my-10 border-neutral-200/50 dark:border-neutral-800/50"
+        />
 
-            <nav>
-              <ul className="flex flex-wrap justify-center gap-6">
-                <li><a href="#home" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Home</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">About</a></li>
-                <li><a href="#projects" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Projects</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-indigo-400 transition-colors text-sm">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+        {/* Bottom: Copyright & Nav */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={VARIANTS.staggerContainer}
+          className="flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500 dark:text-neutral-400"
+        >
+          <motion.p variants={VARIANTS.fadeUp}>
+            © {currentYear} Umar Farouk. All rights reserved.
+          </motion.p>
+
+          <nav>
+            <motion.ul 
+              variants={VARIANTS.staggerContainer}
+              className="flex flex-wrap justify-center gap-6 mt-4 md:mt-0"
+            >
+              {navLinks.map((link, i) => (
+                <motion.li key={i} variants={VARIANTS.fadeUp}>
+                  <a 
+                    href={link.href} 
+                    className="hover:text-neutral-900 dark:hover:text-white transition-colors relative group"
+                  >
+                    {link.label}
+                    <span className="absolute -bottom-0.5 left-0 h-0.5 bg-neutral-900 dark:bg-white w-0 group-hover:w-full transition-all duration-300" />
+                  </a>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </nav>
+        </motion.div>
       </div>
     </footer>
   );
