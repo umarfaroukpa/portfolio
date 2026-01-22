@@ -73,7 +73,7 @@ const About = ({ prefersReducedMotion = false }: AboutProps) => {
           {/* Header */}
           <motion.div variants={VARIANTS.fadeUp} className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold tracking-tight text-neutral-900 dark:text-white">
-              Crafting Reliable Digital Experiences
+              Designing Reliable Digital Experiences
             </h2>
             <p className="mt-5 text-xl sm:text-2xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
               Systems thinker. Detail obsessive. Frontend engineer focused on clarity, performance, and trust.
