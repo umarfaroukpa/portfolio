@@ -374,7 +374,7 @@ const Projects = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) 
         'Data export capabilities (XLSX/PDF) and Recharts for reporting'
       ],
       outcome: 'Comprehensive agency management with contact inbox, invites, approvals, and analytics',
-      tech: ['Next.js 16', 'TypeScript', 'Tailwind CSS 4', 'Axios', 'Zustand', 'Recharts'],
+      tech: ['Next.js 16', 'TypeScript', 'Tailwind CSS 4', 'Axios', 'Zustand', 'Recharts, nodejs, express, render, JWT'],
       image: '/devcore.png',
       liveUrl: 'https://devcore-agency-snowy.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/Devcore-Agency-Frontend'
@@ -390,7 +390,7 @@ const Projects = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) 
         'Complete CRUD operations for courses, assignments, and enrollments'
       ],
       outcome: 'Unified platform with study groups, grade tracking, and comprehensive analytics for all roles',
-      tech: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Axios', 'SWR', 'Google OAuth'],
+      tech: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Axios', 'SWR', 'Google OAuthm nodejs, express, render, JWT, MongoDB, docker,'],
       image: '/academy.png',
       liveUrl: 'https://academic-manager.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/AcademyHub-frontend'
@@ -406,10 +406,26 @@ const Projects = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) 
         'QR code scanning for mobile field operations and real-time analytics'
       ],
       outcome: 'Full-featured platform with 14-day trials, audit trails, and advanced analytics for enterprise use',
-      tech: ['React 18', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Chart.js', 'Vite'],
+      tech: ['React 18', 'TypeScript', 'Tailwind CSS', 'Firebase', 'Chart.js', 'Vite, nodejs, express, render, JWT'],
       image: '/asset.png',
       liveUrl: 'https://asset-management-eta.vercel.app',
       githubUrl: 'https://github.com/umarfaroukpa/Asset-Manager-Frontend/tree/main/asset-management'
+    },
+    {
+      id: 'p10',
+      title: 'Blog Site',
+      context: 'A modern blogging platform with content creation, user authentication, and social features',
+      problem: 'Writers needed a unified platform to personalize their experience and build community',
+      decisions: [
+        'Multi-tenant architecture with Firebase Authentication',
+        'Flexible subscription plans (Starter, Professional, Enterprise) with Paystack integration',
+        'QR code scanning for mobile field operations and real-time analytics'
+      ],
+      outcome: 'Full-featured ',
+      tech: ['React 18', 'TypeScript', 'Tailwind CSS',  'Vite'],
+      image: '/blog.png',
+      liveUrl: 'https://blog-phi-five-71.vercel.app',
+      githubUrl: 'https://github.com/umarfaroukpa/blog'
     }
   ];
 
