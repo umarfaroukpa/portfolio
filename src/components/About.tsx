@@ -76,7 +76,7 @@ const About = ({ prefersReducedMotion = false }: AboutProps) => {
               Designing Reliable Digital Experiences
             </h2>
             <p className="mt-5 text-xl sm:text-2xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-              Systems thinker. Detail obsessive. Frontend engineer focused on clarity, performance, and trust.
+              Systems thinker. Detail obsessive. Frontend Developer focused on clarity, performance, and trust.
             </p>
           </motion.div>
 
@@ -125,7 +125,7 @@ const About = ({ prefersReducedMotion = false }: AboutProps) => {
             className="mt-12 text-center"
           >
             <p className="text-neutral-500 dark:text-neutral-400 italic">
-              “Build for clarity first. Motion only when it teaches. Attention is scarce—don’t waste it.”
+              “Build for clarity first. Motion only when it matters. Attention is scarce—don’t waste it.”
             </p>
           </motion.div>
         </motion.div>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Twitter, Send, MapPin, Calendar, Clock } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, MapPin, Calendar, Clock } from 'lucide-react';
+import Email from './Email';
    
    
 
@@ -70,17 +71,12 @@ export const ContactLink = ({ href, label, icon }: ContactLinkProps) => {
 const Contact = ({ prefersReducedMotion = false }: { prefersReducedMotion?: boolean }) => {
   const contactLinks = [
     {
-      href: "mailto:yasmarfaq51@gmail.com", 
-      label: "Email me",
-      icon: <Mail className="w-6 h-6" />
-    },
-    {
       href: "https://github.com/umarfaroukpa",
       label: "GitHub",
       icon: <Github className="w-6 h-6" />
     },
     {
-      href: "https://linkedin.com/in/umarfaroukpa", 
+      href: "https://www.linkedin.com/in/umar-farouk-ilyas-51a509170", 
       label: "LinkedIn",
       icon: <Linkedin className="w-6 h-6" />
     },
@@ -122,17 +118,21 @@ const Contact = ({ prefersReducedMotion = false }: { prefersReducedMotion?: bool
             className="backdrop-blur-xl bg-white/70 dark:bg-neutral-900/60 rounded-2xl border border-neutral-200/50 dark:border-neutral-800/50 shadow-2xl shadow-black/5 dark:shadow-black/30 p-8 md:p-12"
           >
             <div className="space-y-10">
-              {/* Primary CTA */}
-              <div className="text-center">
-                <motion.a
-                  href="mailto:umarfaroukpa@gmail.com"
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full text-lg font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors shadow-lg hover:shadow-xl"
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Send className="w-5 h-5" />
-                  Send me an email
-                </motion.a>
+              {/* Email Form Component */}
+              <motion.div variants={VARIANTS.fadeUp}>
+                <Email />
+              </motion.div>
+
+              {/* Divider */}
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-neutral-200/50 dark:border-neutral-800/50" />
+                </div>
+                <div className="relative flex justify-center text-sm">
+                  <span className="px-4 bg-white/70 dark:bg-neutral-900/60 text-neutral-500 dark:text-neutral-400">
+                    Or connect with me on
+                  </span>
+                </div>
               </div>
 
               {/* Social links */}
@@ -152,7 +152,7 @@ const Contact = ({ prefersReducedMotion = false }: { prefersReducedMotion?: bool
                 variants={VARIANTS.fadeUp}
                 className="pt-8 border-t border-neutral-200/50 dark:border-neutral-800/50 text-center text-neutral-600 dark:text-neutral-400"
               >
-                <div className="flex items-center justify-center gap-6 text-sm">
+                <div className="flex items-center justify-center gap-6 text-sm flex-wrap">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4" />
                     <span>Abuja, Nigeria</span>

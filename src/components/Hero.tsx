@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Mail, Download } from 'lucide-react';
+import { Github, Linkedin, Twitter, Download } from 'lucide-react';
 
 const EASING = [0.22, 1, 0.36, 1] as any; 
 
@@ -73,7 +73,7 @@ const Hero = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) => {
       label: 'GitHub'
     },
     {
-      href: 'https://www.linkedin.com/in/umarfaroukpa',
+      href: 'https://www.linkedin.com/in/umar-farouk-ilyas-51a509170',
       icon: <Linkedin className="w-5 h-5" />,
       label: 'LinkedIn'
     },
@@ -81,11 +81,6 @@ const Hero = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) => {
       href: 'https://x.com/FaroukIlyas',
       icon: <Twitter className="w-5 h-5" />,
       label: 'X / Twitter'
-    },
-    {
-      href: 'mailto:yasmarfaq51@gmail.com',
-      icon: <Mail className="w-5 h-5" />,
-      label: 'Email'
     }
   ];
 
@@ -142,6 +137,7 @@ const Hero = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) => {
           variants={VARIANTS.textItem}
           className="flex gap-4 flex-wrap"
         >
+          {/* Contact Me - Now scrolls to contact section */}
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
@@ -151,7 +147,7 @@ const Hero = ({ prefersReducedMotion }: { prefersReducedMotion?: boolean }) => {
             Contact Me
           </motion.a>
           <motion.a
-            href="https://drive.google.com/file/d/1sKmDwRFCguivWqWXQp-4BhuCIZsI5Fqk/view?usp=sharing"
+            href="https://drive.google.com/file/d/1uJSF0mVwo3n2H1mU0SHOROm-ZfRzIwTc/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Twitter, Linkedin } from 'lucide-react';
 
 const EASING = [0.22, 1, 0.36, 1] as const;
 
@@ -38,7 +38,7 @@ const Footer = () => {
       label: 'GitHub'
     },
     {
-      href: 'https://www.linkedin.com/in/umarfaroukpa',
+      href: 'https://www.linkedin.com/in/umar-farouk-ilyas-51a509170',
       icon: <Linkedin className="w-5 h-5" />,
       label: 'LinkedIn'
     },
@@ -46,11 +46,6 @@ const Footer = () => {
       href: 'https://x.com/FaroukIlyas',
       icon: <Twitter className="w-5 h-5" />,
       label: 'X / Twitter'
-    },
-    {
-      href: 'mailto:yasmarfaq51@gmail.com',
-      icon: <Mail className="w-5 h-5" />,
-      label: 'Email'
     }
   ];
 
@@ -84,7 +79,7 @@ const Footer = () => {
               Umar Farouk
             </h2>
             <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              Frontend engineer crafting reliable, performant web experiences. Based in Abuja, Nigeria.
+              Frontend Developer crafting reliable, performant web experiences. Based in Abuja, Nigeria.
             </p>
           </motion.div>
 
@@ -126,7 +121,7 @@ const Footer = () => {
           className="flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500 dark:text-neutral-400"
         >
           <motion.p variants={VARIANTS.fadeUp}>
-            © {currentYear} Umar Farouk. All rights reserved.
+            © {currentYear} Umar Farouk Ilyas. All rights reserved.
           </motion.p>
 
           <nav>

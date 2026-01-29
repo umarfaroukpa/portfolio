@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
     { href: '/', label: 'Home' },
     { href: '#projects', label: 'Work' },
     { href: '#about', label: 'About' },
-     { href: '#skills', label: 'Skills' },    
+    { href: '#skills', label: 'Skills' },    
   ];
 
   const mobileMenuVariants: Variants = {
@@ -82,9 +82,9 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               </a>
             ))}
 
-            {/* Contact CTA */}
+            {/* Contact CTA - Now scrolls to contact section */}
             <a
-              href="mailto:yasmarfaq51@gmail.com"
+              href="#contact"
               className="px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg text-sm font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors shadow-sm hover:shadow-md"
             >
               Contact
@@ -178,8 +178,9 @@ const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
                     </a>
                   ))}
 
+                  {/* Contact - Now scrolls to contact section */}
                   <a
-                    href="mailto:yasmarfaq51@gmail.com"
+                    href="#contact"
                     className="mt-6 px-6 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl text-center font-medium hover:opacity-90 transition-opacity"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
